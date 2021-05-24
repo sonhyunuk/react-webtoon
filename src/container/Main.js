@@ -5,15 +5,15 @@ import Footer from '../component/Footer'
 import axios from 'axios';
 import WebtoonList from '../component/WebtoonList';
 
-const Main = () => {
+const Main = (props) => {
     const [webtoonList, setWebtoonList] = useState([]);
     const [dday, setDday] = useState('mon');
 
     useEffect(() => {
         axios.get('dummy/webtoon_list.json')
-            .then(res =>console.log(res.data.webtoonList))
             .then(res => setWebtoonList(res.data.webtoonList))
             .catch(error => console.log(error))
+            console.log(props);
 
     }, []);
     return (
