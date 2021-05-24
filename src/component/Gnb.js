@@ -1,15 +1,17 @@
 import React from 'react';
-const Gnb = () => {
+import {Link} from 'react-router-dom';
+
+const Gnb = ({dday}) => {
     return (
         <ul className="gnb">
             <li>
-                <a href="#none" className="tab_day on">월요일</a>
+                <Link to="/?day=mon" className={dday === 'mon' ? 'tab_day_on' : 'tab_day'}>월요일</Link>
             </li>
             <li>
-                <a href="#none" className="tab_day">화요일</a>
+                <Link to="/?day=tue" className={dday === 'tue' ? 'tab_day_on' : 'tab_day'}>화요일</Link>
             </li>
             <li>
-                <a href="#none" className="tab_day">수요일</a>
+                <Link to="/?day=wed" className={dday === 'wed' ? 'tab_day_on' : 'tab_day'}>수요일</Link>
             </li>
         </ul>
     )

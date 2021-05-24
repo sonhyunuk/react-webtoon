@@ -16,10 +16,13 @@ const Main = (props) => {
             console.log(props);
 
     }, []);
+    useEffect(() => {
+        console.log(props)
+    }, [dday]);
     return (
         <div>
             <Header />
-            <Gnb />
+            <Gnb dday={dday}/>
             <WebtoonList list={webtoonList.filter(webtoon => (
                 dday === webtoon.day
             ))

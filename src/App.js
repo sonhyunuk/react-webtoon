@@ -6,8 +6,6 @@ import './App.css';
 
 const App = () => {
 
- 
-
   return (
     <BrowserRouter>
       <div>
