@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Gnb = ({dday}) => {
+const Gnb = ({ dday }) => {
     return (
         <ul className="gnb">
             <li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import {} from 'recoil';
 import Header from "../component/Header";
 import Gnb from "../component/Gnb";
 import Footer from "../component/Footer";
@@ -14,8 +14,8 @@ class Main extends Component{
         const day = query.get('day');
 
         this.state = {
-            day : day || 'mon', //디폴트로 월요일
-            webtoonList : [] //초기 리스트는 비어있습니다.
+            day : day || 'mon', 
+            webtoonList : [] 
         };
     }
 
@@ -24,7 +24,6 @@ class Main extends Component{
     }
 
     componentDidUpdate(prevProps){
-        //요일이 바뀌면 다시 setState 처리
         let prevQuery = new URLSearchParams(prevProps.location.search);
         let prevDay = prevQuery.get('day');
 
